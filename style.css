@@ -1,0 +1,339 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: #fff;
+    height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.content {
+    max-width: 1000px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Logo Styles */
+.logo {
+    margin-bottom: 30px;
+}
+
+.logo img {
+    max-width: 200px;
+    height: auto;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Typography */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #f0f0f0;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+/* Countdown Styles */
+.countdown {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.countdown-item {
+    margin: 0 15px;
+    text-align: center;
+    min-width: 80px;
+}
+
+.countdown-item span {
+    display: block;
+}
+
+.countdown-item span:first-child {
+    font-size: 3rem;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+.countdown-item .label {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #ccc;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 50px 0;
+}
+
+.feature {
+    flex: 1;
+    min-width: 250px;
+    margin: 15px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #fdbb2d;
+}
+
+/* Newsletter Section */
+.newsletter {
+    margin: 40px 0;
+}
+
+.newsletter h3 {
+    margin-bottom: 20px;
+}
+
+.newsletter form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1rem;
+}
+
+.newsletter button {
+    padding: 15px 25px;
+    background-color: #fdbb2d;
+    color: #333;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.newsletter button:hover {
+    background-color: #f0a500;
+}
+
+#success-message {
+    margin-top: 15px;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Social Media Icons */
+.social-media {
+    margin: 30px 0;
+}
+
+.social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    margin: 0 10px;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background-color: #fdbb2d;
+    color: #333;
+    transform: translateY(-5px);
+}
+
+/* Language Switch */
+.language-switch {
+    margin-top: 30px;
+}
+
+.lang-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.lang-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Particles Background */
+.particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+    
+    .countdown {
+        flex-wrap: wrap;
+    }
+    
+    .countdown-item {
+        margin: 10px;
+    }
+    
+    .countdown-item span:first-child {
+        font-size: 2rem;
+        padding: 10px;
+    }
+    
+    .feature {
+        min-width: 100%;
+        margin: 10px 0;
+    }
+    
+    .newsletter form {
+        flex-direction: column;
+    }
+    
+    .newsletter input {
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .newsletter button {
+        border-radius: 5px;
+    }
+    
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        margin: 0 5px;
+    }
+}
+
+/* RTL Specific Adjustments */
+[dir="rtl"] .newsletter input {
+    border-radius: 0 5px 5px 0;
+}
+
+[dir="rtl"] .newsletter button {
+    border-radius: 5px 0 0 5px;
+}
+
+/* LTR Version */
+html[lang="en"] {
+    direction: ltr;
+}
+
+html[lang="en"] .newsletter input {
+    border-radius: 5px 0 0 5px;
+}
+
+html[lang="en"] .newsletter button {
+    border-radius: 0 5px 5px 0;
+}
