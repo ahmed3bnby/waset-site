@@ -1,8 +1,8 @@
 // Countdown Timer
 document.addEventListener('DOMContentLoaded', function() {
     // Set the launch date - 30 days from now
-    const launchDate = new Date();
-    launchDate.setDate(launchDate.getDate() + 30);
+   const launchDate = new Date();
+    launchDate.setDate(launchDate.getDate() + 12);
     
     // Update countdown every second
     const countdown = setInterval(function() {
